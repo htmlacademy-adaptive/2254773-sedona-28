@@ -1,0 +1,68 @@
+@import "../variabless.less";
+@import "../mixins.less";
+
+.advantages {
+  background-color: @white;
+}
+
+.advantages__list {
+  .list-reset();
+}
+
+.advantages__item {
+  &--blue {
+    background-color: @blue;
+    color: @white;
+  }
+
+  &--grey {
+    background-color: #eeeeee;
+    color: @black;
+  }
+
+  &--bordered {
+    border-top: 1px solid #d6d6d6;
+  }
+}
+
+.advantages__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.advantages__number {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.advantages__description {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.advantages__photo {
+  background-color: @white;
+}
+
+.advantages__sublist {
+  .list-reset();
+}
+
+.advantages__subitem {
+  background-color: @white;
+  color: @black;
+}
+
+.advantages__subtitle {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.advantages__subdescription {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
