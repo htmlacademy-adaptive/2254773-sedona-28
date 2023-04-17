@@ -14,3 +14,31 @@
   line-height: 21px;
   font-weight: 400;
 }
+
+.video-gallery__inner {
+  position: relative;
+}
+
+.video-gallery__button-wrapper {
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .video-gallery {
+    padding-left: 60px;
+    padding-right: 60px;
+    border-top: 0;
+  }
+
+  .video-gallery__video {
+    width: 100%;
+  }
+}

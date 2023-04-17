@@ -6,9 +6,25 @@
   color: @black;
   background-color: #e7e5e5;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }
 
 .page__body {
   background-color: @white;
   margin: 0;
+  width: 320px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .page__body {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    width: @desktop-width;
+  }
 }

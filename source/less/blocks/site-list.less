@@ -1,9 +1,31 @@
 .site-list {
   background-color: @blue;
   .list-reset();
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: none;
 }
 
 .site-list__link {
   .link-reset();
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    background-color: @white;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .site-list__link {
+    color: @black;
+  }
 }
