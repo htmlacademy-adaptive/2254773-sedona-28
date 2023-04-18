@@ -59,3 +59,49 @@
   text-transform: none;
   color: rgba(51, 51, 51, 0.6);
 }
+
+@media (min-width: @tablet-width) {
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review-form__fieldset {
+    border: 0;
+    margin: 0;
+    width: 100%;
+
+    &--w50 {
+      width: 50%;
+    }
+
+    &--bordered {
+      box-sizing: border-box;
+      border-right: 1px solid #e5e5e5;
+    }
+  }
+
+  .review-form__radio-list,
+  .review-form__checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review-form__radio-item,
+  .review-form__checkbox-item {
+    width: 50%;
+  }
+
+  .review-form__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form__radio-item,
+  .review-form__checkbox-item {
+    width: auto;
+  }
+}
