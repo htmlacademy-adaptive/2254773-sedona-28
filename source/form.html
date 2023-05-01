@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Форма отзыва</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -13,7 +14,6 @@
         <a class="header__logo" href="index.html">
           <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
         </a>
-        <!-- <nav class="page-nav page-nav--opened"> -->
         <nav class="page-nav">
           <button class="page-nav__toggle" type="button">
             <svg aria-hidden="true" focusable="false" class="page-nav__icon page-nav__close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
@@ -33,7 +33,6 @@
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Фото и видео</a>
             </li>
-            <li class="site-list__item site-list__item--separator"></li>
             <li class="site-list__item">
               <a class="site-list__link site-list__link--current" href="form.html">Форма отзыва</a>
             </li>
@@ -46,51 +45,53 @@
       <main class="main-block">
         <section class="intro intro--form">
           <div class="intro__wrapper">
-            <img class="intro__image-text" src="./img/welcome.svg" width="282" height="214" alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон - не очень.">
-            <img class="intro__background" src="./img/sedona-mountes.jpg" alt="Горы Седоны.">
+            <img class="intro__image-text" src="./img/sedona.svg" width="229" height="39" alt="Седона.">
+            <img class="intro__background" src="./img/sedona-mountes.jpg" width="320" height="389" alt="Горы Седоны.">
           </div>
           <h1 class="intro__title">Оставьте свой отзыв</h1>
           <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
         <form class="review-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="review-form__fieldset review-form__fieldset--w50 review-form__fieldset--bordered">
-            <h2 class="review-form__title">Представьтесь:</h2>
-            <ul class="review-form__input-list">
-              <li class="review-form__input-item">
-                <label class="review-form__label-text" for="name">ИМЯ*:</label>
-                <input class="review-form__input-text" type="text" id="name" name="name" value="Пётр" required>
-              </li>
-              <li class="review-form__input-item">
-                <label class="review-form__label-text" for="surname">ФАМИЛИЯ*:</label>
-                <input class="review-form__input-text" type="text" id="surname" name="surname" value="Пустота" required>
-              </li>
-              <li class="review-form__input-item">
-                <label class="review-form__label-text" for="fathername">Отчество:</label>
-                <input class="review-form__input-text" type="text" id="fathername" name="fathername" value="Викторович">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="review-form__fieldset review-form__fieldset--w50">
-            <h2 class="review-form__title">Контактная информация:</h2>
-            <ul class="review-form__input-list">
-              <li class="review-form__input-item">
-                <label class="review-form__label-text" for="phone">Контактный телефон*:</label>
-                <label class="review-form__label-control">
-                  <input class="review-form__input-text" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
-                  <span class="review-form__control-icon review-form__control-icon--phone"></span>
-                </label>
-              </li>
-              <li class="review-form__input-item">
-                <label class="review-form__label-text" for="e-mail">Электронная почта*:</label>
-                <label class="review-form__label-control">
-                  <input class="review-form__input-text" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
-                  <span class="review-form__control-icon review-form__control-icon--mail"></span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="review-form__wrapper">
+            <fieldset class="review-form__fieldset review-form__fieldset--bordered">
+              <h2 class="review-form__title"><span class="review-form__title-text">Представьтесь:</span></h2>
+              <ul class="review-form__input-list">
+                <li class="review-form__input-item">
+                  <label class="review-form__label-text" for="name">ИМЯ*:</label>
+                  <input class="review-form__input-text" type="text" id="name" name="name" value="Пётр" required>
+                </li>
+                <li class="review-form__input-item">
+                  <label class="review-form__label-text" for="surname">ФАМИЛИЯ*:</label>
+                  <input class="review-form__input-text" type="text" id="surname" name="surname" value="Пустота" required>
+                </li>
+                <li class="review-form__input-item">
+                  <label class="review-form__label-text" for="fathername">Отчество:</label>
+                  <input class="review-form__input-text" type="text" id="fathername" name="fathername" value="Викторович">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="review-form__fieldset">
+              <h2 class="review-form__title"><span class="review-form__title-text">Контактная информация:</span></h2>
+              <ul class="review-form__input-list">
+                <li class="review-form__input-item">
+                  <label class="review-form__label-text" for="phone">Контактный телефон*:</label>
+                  <label class="review-form__label-control">
+                    <input class="review-form__input-text" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
+                    <span class="review-form__control-icon review-form__control-icon--phone"></span>
+                  </label>
+                </li>
+                <li class="review-form__input-item">
+                  <label class="review-form__label-text" for="e-mail">Электронная почта*:</label>
+                  <label class="review-form__label-control">
+                    <input class="review-form__input-text" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
+                    <span class="review-form__control-icon review-form__control-icon--mail"></span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="review-form__fieldset">
-            <h2 class="review-form__title">Ваше общее впечатление:</h2>
+            <h2 class="review-form__title"><span class="review-form__title-text">Ваше общее впечатление:</span></h2>
             <ul class="review-form__radio-list">
               <li class="review-form__radio-item">
                 <label class="review-form__label-radio">
@@ -116,7 +117,7 @@
             </ul>
           </fieldset>
           <fieldset class="review-form__fieldset">
-            <h2 class="review-form__title">Посещенные достопримечательности:</h2>
+            <h2 class="review-form__title"><span class="review-form__title-text">Посещенные достопримечательности:</span></h2>
             <ul class="review-form__checkbox-list">
               <li class="review-form__checkbox-item">
                 <label class="review-form__label-checkbox">
@@ -149,7 +150,7 @@
             </ul>
           </fieldset>
           <fieldset class="review-form__fieldset">
-            <h2 class="review-form__title">Опишите свои эмоции:</h2>
+            <h2 class="review-form__title"><span class="review-form__title-text">Опишите свои эмоции:</span></h2>
             <textarea class="review-form__textarea" placeholder="Опишите подробно все свои восторги" name="emotion"></textarea>
           </fieldset>
           <div class="review-form__footer">

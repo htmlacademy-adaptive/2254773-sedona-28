@@ -2,150 +2,222 @@
   position: relative;
 
   &--index {
-    .intro__title {
-      padding: 36px 20px 24px;
-      font-size: 18px;
-      text-align: center;
-      font-weight: 700;
-      width: 100%;
-      box-sizing: border-box;
-      display: block;
-      margin: 0;
+    .intro__wrapper {
+      margin-bottom: 36px;
 
-      @media (min-width: @tablet-width) {
-        padding: 47px 124px 40px;
-        font-size: 21px;
+      @media screen and (min-width: @tablet-width) {
+        margin-bottom: 47px;
       }
 
-      @media (min-width: @desktop-width) {
-        padding: 59px 357px 39px;
+      @media screen and (min-width: @desktop-width) {
+        margin-bottom: 59px;
+      }
+    }
+
+    .intro__title {
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+      margin: 0 auto 24px;
+      text-align: center;
+
+      @media screen and (min-width: @tablet-width) {
+        font-size: 21px;
+        margin: 0 auto 40px;
+      }
+
+      @media screen and (min-width: @desktop-width) {
+        margin: 0 auto 39px;
       }
     }
 
     .intro__text {
-      padding: 0 20px 28px;
+      margin: 0 auto 28px;
 
-      @media (min-width: @tablet-width) {
-        padding: 0 124px 55px;
+      @media screen and (min-width: @tablet-width) {
+        margin: 0 auto 55px;
       }
 
-      @media (min-width: @desktop-width) {
-        padding: 0 357px 44px 359px;
+      @media screen and (min-width: @desktop-width) {
+        margin: 0 auto 44px;
       }
     }
   }
 
   &--form {
-    .intro__title {
-      padding: 36px 20px 24px;
-      font-size: 18px;
-      text-align: center;
-      font-weight: 700;
-      width: 100%;
-      box-sizing: border-box;
-      display: block;
-      margin: 0;
+    padding-bottom: 28px;
 
-      @media (min-width: @tablet-width) {
-        padding: 64px 166px 20px;
-        font-size: 30px;
-        line-height: 26px;
+    @media screen and (min-width: @tablet-width) {
+      padding-bottom: 0;
+      margin-bottom: 101px;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      margin-bottom: 61px;
+    }
+
+    .intro__wrapper {
+      margin-bottom: 36px;
+
+      @media screen and (min-width: @tablet-width) {
+        margin-bottom: 64px;
       }
 
-      @media (min-width: @desktop-width) {
-        padding: 115px 382px 31px;
+      @media screen and (min-width: @desktop-width) {
+        margin-bottom: 115px;
+      }
+    }
+
+    .intro__title {
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 24px;
+      text-align: center;
+
+      @media screen and (min-width: @tablet-width) {
+        font-size: 30px;
+        line-height: 26px;
+        max-width: 435px;
+        margin: 0 auto 20px;
+      }
+
+      @media screen and (min-width: @desktop-width) {
+        margin: 0 auto 31px;
       }
     }
 
     .intro__text {
-      @media (min-width: @tablet-width) {
-        padding: 0 166px 108px;
+      max-width: 280px;
+      margin: 0 auto;
+
+      @media screen and (min-width: @tablet-width) {
+        max-width: 435px;
+        margin: 0 auto;
       }
 
-      @media (min-width: @desktop-width) {
-        padding: 0 382px 68px;
+      @media screen and (min-width: @desktop-width) {
+        margin: 0 auto;
       }
     }
   }
 
   &--catalog {
-    .intro__title {
-      padding: 37px 20px 37px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 700;
-      width: 100%;
-      box-sizing: border-box;
-      display: block;
-      margin: 0;
+    .intro__wrapper {
+      margin-bottom: 37px;
 
-      @media (min-width: @tablet-width) {
-        padding: 66px 155px 39px;
-        font-size: 30px;
-        line-height: 26px;
+      @media screen and (min-width: @tablet-width) {
+        margin-bottom: 66px;
       }
 
-      @media (min-width: @desktop-width) {
-        padding: 100px 370px 39px 372px;
+      @media screen and (min-width: @desktop-width) {
+        margin-bottom: 100px;
+      }
+    }
+
+    .intro__title {
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 37px;
+      text-align: center;
+
+      @media screen and (min-width: @tablet-width) {
+        font-size: 30px;
+        line-height: 26px;
+        max-width: 458px;
+        margin: 0 auto 39px;
+      }
+
+      @media screen and (min-width: @desktop-width) {
+        margin: 0 auto 39px;
       }
     }
 
     .intro__text {
-      padding: 0 20px 25px;
+      max-width: 280px;
+      margin: 0 auto 25px;
 
-      @media (min-width: @tablet-width) {
-        padding: 0 155px 67px;
+      @media screen and (min-width: @tablet-width) {
+        max-width: 458px;
+        margin: 0 auto 67px;
       }
 
-      @media (min-width: @desktop-width) {
-        padding: 0 370px 65px 372px;
+      @media screen and (min-width: @desktop-width) {
+        margin: 0 auto 65px;
       }
     }
+  }
+}
+
+.intro__title {
+  max-width: 284px;
+
+  @media screen and (min-width: @tablet-width) {
+    max-width: 520px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    max-width: 484px;
   }
 }
 
 .intro__text {
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
+  max-width: 284px;
   text-align: center;
+
+  @media screen and (min-width: @tablet-width) {
+    max-width: 520px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    max-width: 484px;
+  }
 }
 
 .intro__wrapper {
-  background-color: #bfced7;
   position: relative;
-  padding: 90px 0 85px;
   display: flex;
-  justify-content: center;
   overflow: hidden;
+  justify-content: center;
+  padding: 90px 0 85px;
+  background-color: #bfced7;
 
   &::after {
-    content: "";
-    display: block;
     position: absolute;
+    z-index: 1;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    display: block;
     height: 57px;
+    content: "";
     background-image: url("../../img/intro-triangle.svg");
     background-position: 50% 50%;
-    z-index: 1;
   }
 }
 
 .intro__image-text {
   position: relative;
+  z-index: 1;
   display: block;
   width: 282px;
-  z-index: 1;
 }
 
 .intro__background {
   position: absolute;
+  z-index: 0;
   top: 0;
   bottom: 0;
-  margin: 0 auto;
-  max-width: none;
   display: block;
-  z-index: 0;
+  max-width: none;
+  margin: 0 auto;
 }
