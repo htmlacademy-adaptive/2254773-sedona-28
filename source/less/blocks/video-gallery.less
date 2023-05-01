@@ -1,44 +1,96 @@
 .video-gallery {
-  padding: 17px 20px 0;
-  border-top: 1px solid #e5e5e5;
+  padding: 17px 26px 0 28px;
+  text-align: center;
+  border-top: 1px solid @grey;
+
+  @media screen and (min-width: @tablet-width) {
+    padding: 0 60px;
+    border-top: 0;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .video-gallery__title {
   font-size: 21px;
-  line-height: 26px;
   font-weight: 700;
+  line-height: 26px;
+  max-width: 266px;
+  margin: 0 auto 39px;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 30px;
+    max-width: 445px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    margin: 0 auto 35px;
+  }
 }
 
 .video-gallery__description {
   font-size: 14px;
-  line-height: 21px;
   font-weight: 400;
+  line-height: 21px;
+  max-width: 266px;
+  margin: 0 auto 38px;
+
+  @media screen and (min-width: @tablet-width) {
+    max-width: 445px;
+    margin: 0 auto 66px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    margin: 0 auto 64px;
+  }
 }
 
 .video-gallery__inner {
   position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: @tablet-width) {
+    display: flex;
+    max-width: 648px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    max-width: 800px;
+  }
 }
 
 .video-gallery__button-wrapper {
-  display: flex;
   position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 0;
   z-index: 1;
-  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: @tablet-width) {
-  .video-gallery {
-    padding-left: 60px;
-    padding-right: 60px;
-    border-top: 0;
-  }
+.video-gallery__video {
+  min-width: 100%;
+  min-height: 177px;
 
-  .video-gallery__video {
+  @media screen and (min-width: @tablet-width) {
     width: 100%;
   }
+}
+
+.video-gallery__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 54px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }

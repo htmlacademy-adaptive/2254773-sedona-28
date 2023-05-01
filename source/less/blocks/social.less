@@ -1,8 +1,54 @@
 .social {
   padding: 30px 0;
+
+  @media screen and (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .social__list {
   .list-reset();
   display: flex;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.social__youtybe,
+.social__vkontakte,
+.social__telegram {
+  color: @white;
+  background-color: #81b3d2;
+}
+
+.social__link {
+  &:hover .social__youtybe {
+    background-color: @blue;
+  }
+
+  &:active .social__youtybe {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-social;
+  }
+
+  &:hover .social__telegram {
+    background-color: @blue;
+  }
+
+  &:active .social__telegram {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-social;
+  }
+
+  &:hover .social__vkontakte {
+    background-color: @blue;
+  }
+
+  &:active .social__vkontakte {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue-social;
+  }
 }
