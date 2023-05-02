@@ -204,10 +204,26 @@
   margin: 0;
 }
 
-.advantages__photo {
+.advantages__picture {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  max-height: 260px;
+
+  @media screen and (min-width: @tablet-width) {
+    width: calc(100% * 2 / 3);
+    max-height: 256px;
+  }
+}
+
+.advantages__photo {
+  position: relative;
+  width: 100%;
+  height: auto;
   background-color: @white;
-  display: block;
 
   @media screen and (min-width: @tablet-width) {
     // width: calc(100% * 2 / 3);
