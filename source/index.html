@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
     <div class="page__wrapper">
       <header class="header">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
+          <img class="header__logo-image" src="img/logo@1x.svg" srcset="./img/logo@2x.svg 2x" width="185" height="96" alt="Логотип Седона.">
         </a>
         <!-- --opened - открывает меню, --nojs - работает при отключенном js -->
-        <nav class="page-nav page-nav--opened page-nav--nojs">
+        <nav class="page-nav">
           <button class="page-nav__toggle" type="button">
             <svg aria-hidden="true" focusable="false" class="page-nav__icon page-nav__close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
               <path fill="currentColor" d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z"/>
@@ -47,7 +51,6 @@
         <section class="intro intro--index">
           <div class="intro__wrapper">
             <img class="intro__image-text" src="./img/welcome.svg" width="282" height="214" alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон - не очень.">
-            <img class="intro__background" src="./img/sedona-mountes.jpg" width="320" height="389" alt="Горы Седоны.">
           </div>
           <h1 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -61,7 +64,11 @@
                 <p class="advantages__number">-№1-</p>
                 <p class="advantages__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="advantages__photo" src="./img/street.jpg" width="320" height="260" alt="Улица Седона.">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="./img/street-desktop@1x.jpg 1x, ./img/street-desktop@2x.jpg 2x" width="800" height="256">
+                <source media="(min-width: 768px)" srcset="./img/street-tablet@1x.jpg 1x, ./img/street-tablet@2x.jpg 2x" width="512" height="256">
+                <img class="advantages__photo" src="./img/street@1x.jpg" srcset="./img/street@2x.jpg 2x" width="320" height="260" alt="Улица Седона.">
+              </picture>
               <ul class="advantages__sublist">
                 <li class="advantages__subitem advantages__subitem--house">
                   <h4 class="advantages__subtitle">Жильё</h4>
@@ -83,7 +90,11 @@
                 <p class="advantages__number">-№2-</p>
                 <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="advantages__photo" src="./img/gorge.jpg" width="320" height="260" alt="Мост дьявола.">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="./img/gorge-desktop@1x.jpg 1x, ./img/gorge-desktop@2x.jpg 2x" width="800" height="256">
+                <source media="(min-width: 768px)" srcset="./img/gorge-tablet@1x.jpg 1x, ./img/gorge-tablet@2x.jpg 2x" width="512" height="256">
+                <img class="advantages__photo" src="./img/gorge@1x.jpg" srcset="./img/gorge@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
+              </picture>
             </li>
             <li class="advantages__item advantages__item--grey">
               <div class="advantages__info">
@@ -113,7 +124,7 @@
           <b class="hotel-search__lead">Заинтересовались?</b>
           <p class="hotel-search__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button class="button hotel-search__button" type="button">Найти гостиницу</button>
-          <iframe class="hotel-search__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1639619.050137019!2d-111.35901588536552!3d34.2939936017385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2spl!4v1682459074258!5m2!1sru!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          <iframe class="hotel-search__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1639619.050137019!2d-111.35901588536552!3d34.2939936017385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2spl!4v1682459074258!5m2!1sru!2spl" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           height="350" allowfullscreen title="Географическая карта Седоны"></iframe>
         </section>
       </main>
