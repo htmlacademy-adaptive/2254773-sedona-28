@@ -83,7 +83,7 @@
       }
 
       @media screen and (min-width: @desktop-width) {
-        max-width: 260px;
+        max-width: 262px;
       }
     }
 
@@ -98,6 +98,20 @@
     @media screen and (min-width: @tablet-width) {
       flex-direction: row-reverse;
     }
+
+    .advantages__title {
+      @media screen and (min-width: @tablet-width) {
+        padding-right: 18px;
+        padding-left: 17px;
+      }
+    }
+
+    .advantages__info {
+      @media screen and (min-width: @desktop-width) {
+        padding-right: 84px;
+        padding-left: 84px;
+      }
+    }
   }
 
   &--grey {
@@ -111,7 +125,7 @@
       align-items: center;
       align-self: stretch;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       padding: 0 33px;
     }
 
@@ -120,7 +134,7 @@
     }
 
     .advantages__info {
-      padding: 24px 0;
+      padding: 24px 0 25px;
 
       @media screen and (min-width: @tablet-width) {
         padding: 41px 0 42px;
@@ -152,7 +166,7 @@
       }
 
       @media screen and (min-width: @desktop-width) {
-        max-width: 277px;
+        max-width: 283px;
       }
     }
   }
@@ -189,6 +203,8 @@
 
   @media screen and (min-width: @tablet-width) {
     margin-bottom: 14px;
+    font-size: 21px;
+    line-height: 26px;
   }
 }
 
@@ -270,6 +286,22 @@
     }
   }
 
+  &--meal {
+    @media screen and (min-width: @tablet-width) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  &--souvenirs {
+    .advantages__subdescription {
+      @media screen and (min-width: @desktop-width) {
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+    }
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -280,6 +312,7 @@
     content: "";
     background-repeat: no-repeat;
     background-size: 100%;
+    background-color: @blue-light;
 
     @media screen and (min-width: @tablet-width) {
       position: relative;
@@ -288,20 +321,24 @@
 
       width: 80px;
       height: 80px;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      margin-bottom: 28px;
     }
   }
 
   &--house::before {
-    background-image: url("../../img/house.svg");
+    mask-image: url("../../img/sprite.svg#house-icon");
   }
 
   &--meal::before {
-    background-image: url("../../img/burger.svg");
+    mask-image: url("../../img/sprite.svg#burger-icon");
   }
 
   &--souvenirs::before {
-    background-image: url("../../img/gift.svg");
+    mask-image: url("../../img/sprite.svg#gift-icon");
   }
 }
 
@@ -314,6 +351,7 @@
 
   @media screen and (min-width: @tablet-width) {
     margin: 0 0 24px;
+    font-size: 21px;
   }
 }
 
@@ -325,5 +363,9 @@
   @media screen and (min-width: @tablet-width) {
     max-width: 190px;
     text-align: center;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    max-width: 282px;
   }
 }

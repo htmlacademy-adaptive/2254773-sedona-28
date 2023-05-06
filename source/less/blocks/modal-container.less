@@ -26,8 +26,8 @@
 
     @media screen and (min-width: @tablet-width) {
       width: 400px;
-      padding-top: 50px;
-      padding-bottom: 49px;
+      padding-top: 49px;
+      padding-bottom: 48px;
     }
 
     @media screen and (min-width: @desktop-width) {
@@ -35,22 +35,27 @@
     }
 
     .modal-content__title {
-      padding: 0 42px 37px 41px;
+      margin: 0 auto 25px;
 
       @media screen and (min-width: @tablet-width) {
-        padding: 0 47px 37px 46px;
+        margin: 0 auto 22px;
+        max-width: 209px;
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @media screen and (min-width: @desktop-width) {
+        margin-bottom: 25px;
       }
     }
 
     .modal-content__text {
-      padding: 0 42px 28px 41px;
+      margin: 0 auto 28px;
+      max-width: 206px;
 
       @media screen and (min-width: @tablet-width) {
-        padding: 0 47px 25px 46px;
-      }
-
-      @media screen and (min-width: @desktop-width) {
-        padding-bottom: 23px;
+        max-width: 276px;
+        margin-bottom: 46px;
       }
     }
   }
@@ -68,23 +73,24 @@
     }
 
     .modal-content__title {
-      padding: 0 39px 37px 37px;
+      margin: 0 auto 25px;
 
       @media screen and (min-width: @tablet-width) {
         font-size: 30px;
-        padding: 0 99px 37px 97px;
+        margin-bottom: 29px;
       }
     }
 
     .modal-content__text {
-      padding: 0 39px 30px 37px;
+      max-width: 214px;
+      margin: 0 auto 51px;
 
       @media screen and (min-width: @tablet-width) {
-        padding: 0 99px 30px 97px;
+        max-width: 444px;
       }
 
       @media screen and (min-width: @desktop-width) {
-        padding-bottom: 28px;
+        margin-bottom: 53px;
       }
     }
 
@@ -129,7 +135,7 @@
     padding: 18px 79px 14px 79px;
 
     @media screen and (min-width: @tablet-width) {
-      padding: 18px 122px 14px 123px;
+      padding: 18px 124px 14px;
     }
   }
 
@@ -141,8 +147,7 @@
     @media screen and (min-width: @tablet-width) {
       font-size: 21px;
       width: auto;
-      padding-right: 140px;
-      padding-left: 139px;
+      padding: 18px 154px 14px;
     }
   }
 }
