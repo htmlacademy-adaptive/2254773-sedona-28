@@ -56,13 +56,13 @@
   }
 
   .review-form__fieldset:first-child {
-    @media screen and (max-width: calc(@tablet-width - 1px)) {
+    @media screen and (max-width: @before-tablet-width) {
       margin-bottom: 39px;
     }
   }
 
   .review-form__fieldset:nth-child(2) {
-    @media screen and (max-width: calc(@tablet-width - 1px)) {
+    @media screen and (max-width: @before-tablet-width) {
       margin-bottom: 34px;
     }
 
@@ -189,6 +189,11 @@
     outline-offset: -4px;
     background-color: @white;
   }
+
+  &:focus {
+    outline: 4px solid @grey;
+    outline-offset: -4px;
+  }
 }
 
 .review-form__control-icon {
@@ -212,13 +217,13 @@
 
   &--phone {
     &::after {
-      mask-image: url("../../img/sprite.svg#phone-icon");
+      mask-image: url("../img/sprite.svg#phone-icon");
     }
   }
 
   &--mail {
     &::after {
-      mask-image: url("../../img/sprite.svg#mail-icon");
+      mask-image: url("../img/sprite.svg#mail-icon");
     }
   }
 }
@@ -396,6 +401,18 @@
   }
 }
 
+.review-form__control-input:focus {
+  & + .review-form__mark-radio {
+    outline: 4px solid @grey;
+    outline-offset: -4px;
+  }
+
+  & + .review-form__mark-checkbox {
+    outline: 4px solid @grey;
+    outline-offset: -4px;
+  }
+}
+
 .review-form__control-input:checked {
   & + .review-form__mark-radio::before {
     position: absolute;
@@ -420,7 +437,7 @@
     width: 22px;
     height: 16px;
     content: "";
-    mask-image: url("../../img/sprite.svg#mark-icon");
+    mask-image: url("../img/sprite.svg#mark-icon");
     background-color: @black;
   }
 
