@@ -11,7 +11,7 @@
     display: block;
     height: 37px;
     content: "";
-    background-image: url("../../img/triangle-advantages.svg");
+    background-image: url("../img/triangle-advantages.svg");
     background-position: 50% 50%;
 
     @media screen and (min-width: @tablet-width) {
@@ -43,7 +43,7 @@
     }
 
     .advantages__info {
-      @media screen and (max-width: calc(@tablet-width - 1px)) {
+      @media screen and (max-width: @before-tablet-width) {
         padding: 33px 18px 40px;
       }
     }
@@ -240,11 +240,6 @@
   width: 100%;
   height: auto;
   background-color: @white;
-
-  @media screen and (min-width: @tablet-width) {
-    // width: calc(100% * 2 / 3);
-    // height: 256px;
-  }
 }
 
 .advantages__sublist {
@@ -330,15 +325,15 @@
   }
 
   &--house::before {
-    mask-image: url("../../img/sprite.svg#house-icon");
+    mask-image: url("../img/sprite.svg#house-icon");
   }
 
   &--meal::before {
-    mask-image: url("../../img/sprite.svg#burger-icon");
+    mask-image: url("../img/sprite.svg#burger-icon");
   }
 
   &--souvenirs::before {
-    mask-image: url("../../img/sprite.svg#gift-icon");
+    mask-image: url("../img/sprite.svg#gift-icon");
   }
 }
 
