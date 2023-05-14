@@ -1,0 +1,45 @@
+.line-break {
+  &--mobile,
+  &--tablet,
+  &--tablet-plus,
+  &--desktop {
+    &::after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+  &--mobile {
+    @media screen and (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media screen and (min-width: @tablet-width) {
+      display: inline;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--tablet-plus {
+    display: none;
+
+    @media screen and (min-width: @tablet-width) {
+      display: inline;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media screen and (min-width: @desktop-width) {
+      display: inline;
+    }
+  }
+}
