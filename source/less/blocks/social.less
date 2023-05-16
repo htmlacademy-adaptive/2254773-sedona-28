@@ -1,5 +1,5 @@
 .social {
-  padding: 30px 0 25px;
+  padding: 30px 0 33px;
   max-width: 200px;
 
   @media screen and (min-width: @tablet-width) {
@@ -19,7 +19,7 @@
   }
 }
 
-.social__youtybe,
+.social__youtube,
 .social__vkontakte,
 .social__telegram {
   color: @white;
@@ -27,11 +27,13 @@
 }
 
 .social__link {
-  &:hover .social__youtybe {
+  display: flex;
+
+  &:hover .social__youtube {
     background-color: @blue;
   }
 
-  &:active .social__youtybe {
+  &:active .social__youtube {
     color: rgba(255, 255, 255, 0.3);
     background-color: @blue-social;
   }

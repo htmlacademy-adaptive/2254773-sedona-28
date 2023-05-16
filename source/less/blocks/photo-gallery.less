@@ -1,6 +1,4 @@
 .photo-gallery {
-  padding: 0 20px 0;
-
   @media screen and (min-width: @tablet-width) {
     margin-bottom: 54px;
     padding: 0 60px 0;
@@ -14,9 +12,11 @@
 
 .photo-gallery__item {
   border-top: 1px solid @grey;
+  padding: 0 20px 0;
 
   @media screen and (min-width: @tablet-width) {
     border: 0;
+    padding: 0;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -89,7 +89,7 @@
   }
 }
 
-.photo-gallery_like-icon {
+.photo-gallery__like-icon {
   box-sizing: content-box;
   padding-right: 10px;
   padding-bottom: 9px;
@@ -164,6 +164,8 @@
     padding: 17px 20px 17px 25px;
     content: "";
     color: @white;
+    max-height: 100%;
+    overflow-y: auto;
   }
 
   &::before {

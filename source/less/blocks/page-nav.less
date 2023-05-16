@@ -16,10 +16,15 @@
     }
   }
 
-  &--opened {
+  &--opened,
+  &--nojs {
     .page-nav__list,
     .page-nav__close-icon {
       display: block;
+
+      @media screen and (min-width: @tablet-width) {
+        display: flex;
+      }
     }
 
     .page-nav__menu-icon {
@@ -27,7 +32,7 @@
     }
   }
 
-  &:not(&--opened) {
+  &:not(&--opened):not(&--nojs) {
     line-height: 21px;
     font-weight: 700;
     font-size: 14px;

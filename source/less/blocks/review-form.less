@@ -171,7 +171,7 @@
 }
 
 .review-form__input-text {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -232,7 +232,7 @@
 .review-form__label-checkbox {
   position: relative;
   display: block;
-  padding-left: 62px;
+  padding-left: 61px;
 }
 
 .review-form__mark-radio {
@@ -444,6 +444,16 @@
 
   & + .review-form__mark-checkbox:active::before {
     opacity: 0.3;
+  }
+}
+
+.review-form__control-input[disabled] {
+  & + .review-form__mark-radio,
+  & ~ .review-form__text-radio,
+  & + .review-form__mark-checkbox,
+  & ~ .review-form__text-checkbox {
+    opacity: 0.2;
+    cursor: not-allowed;
   }
 }
 
