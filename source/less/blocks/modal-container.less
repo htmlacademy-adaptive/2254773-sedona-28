@@ -51,10 +51,10 @@
 
     .modal-content__text {
       margin: 0 auto 28px;
-      max-width: 206px;
+      max-width: 207px;
 
       @media screen and (min-width: @tablet-width) {
-        max-width: 276px;
+        max-width: 277px;
         margin-bottom: 46px;
       }
     }
@@ -82,7 +82,7 @@
     }
 
     .modal-content__text {
-      max-width: 214px;
+      max-width: 216px;
       margin: 0 auto 51px;
 
       @media screen and (min-width: @tablet-width) {
@@ -127,7 +127,16 @@
 }
 
 .modal-content__close-button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @blue;
+  }
 
   &--error {
     box-sizing: border-box;
